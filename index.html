@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <!-- We only include this to explicitly loosen the CSP of various packager environments. It does not provide any security. -->
   <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: blob:">
-  <title>33 (1)</title>
+  <title>诗词大会</title>
   <style>
     body {
       color: #ffffff;
@@ -16,7 +16,7 @@
       padding: 0;
     }
     :root, body.is-fullscreen {
-      background-color: #000000;
+      background-color: #ffffff;
     }
     [hidden] {
       display: none !important;
@@ -46,7 +46,7 @@
       cursor: default;
       user-select: none;
       -webkit-user-select: none;
-      background-color: #000000;
+      background-color: #ffffff;
     }
     #launch {
       background-color: rgba(0, 0, 0, 0.7);
@@ -112,10 +112,10 @@
       border-radius: 4px;
     }
     .control-button:hover {
-      background: #ff4c4c26;
+      background: #ffffff26;
     }
     .control-button.active {
-      background: #ff4c4c59;
+      background: #ffffff59;
     }
     .fullscreen-button {
       background: white !important;
@@ -133,17 +133,17 @@
       cursor: auto;
     }
     .sc-monitor-root[opcode^="data_"] .sc-monitor-value-color {
-      background-color: #ff8c1a;
+      background-color: #ffffff;
     }
     .sc-monitor-row-value-outer {
-      background-color: #fc662c;
+      background-color: #ffffff;
     }
     .sc-monitor-row-value-editing .sc-monitor-row-value-outer {
-      background-color: #e25b27;
+      background-color: #e5e5e5;
     }
     
   </style>
-  <meta name="theme-color" content="#000000">
+  <meta name="theme-color" content="#ffffff">
   
 </head>
 <body>
@@ -205,7 +205,7 @@
       scaffolding.width = 480;
       scaffolding.height = 360;
       scaffolding.resizeMode = "preserve-ratio";
-      scaffolding.editableLists = false;
+      scaffolding.editableLists = true;
       scaffolding.usePackagedRuntime = true;
       scaffolding.setup();
       scaffolding.appendTo(appElement);
@@ -222,13 +222,13 @@
       };
 
       scaffolding.setUsername("player####".replace(/#/g, () => Math.floor(Math.random() * 10)));
-      scaffolding.setAccentColor("#ff4c4c");
+      scaffolding.setAccentColor("#ffffff");
 
       scaffolding.addCloudProvider(new Scaffolding.Cloud.WebSocketProvider(["wss://clouddata.turbowarp.org","wss://clouddata.turbowarp.xyz"], "p4-@33 (1).sb3"));
 
       vm.setTurboMode(false);
       if (vm.setInterpolation) vm.setInterpolation(true);
-      if (vm.setFramerate) vm.setFramerate(60);
+      if (vm.setFramerate) vm.setFramerate(120);
       if (vm.renderer.setUseHighQualityRender) vm.renderer.setUseHighQualityRender(false);
       if (vm.setRuntimeOptions) vm.setRuntimeOptions({
         fencing: true,
